@@ -1,8 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <Title>GroupBox control for AvaloniaUI</Title>
     <AssemblyName>Teast.Controls.GroupBox</AssemblyName>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Teast.Controls.GroupBox</RootNamespace>
+    <Authors>Niklas Jansson</Authors>
+    <Owners>Niklas Jansson</Owners>
+    <Copyright>Copyright © 2018</Copyright>
+    <PackageProjectUrl>https://github.com/teast/Avalonia.GroupBox</PackageProjectUrl>
+    <Description>Implements an GroupBox-like component for AvalonioUI</Description>
+    <PackageTags>Avalonia AvalonioUI GroupBox control</PackageTags>
     <Version>1.0.6.0</Version>
   </PropertyGroup>
   <ItemGroup>
