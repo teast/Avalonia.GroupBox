@@ -1,0 +1,13 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:teast="clr-namespace:Teast.Controls;assembly=Teast.Controls.GroupBox"
+        Title="Sample"
+        Padding="5">
+    <teast:GroupBox
+        Header="This is a header">
+        <StackPanel>
+            <TextBlock Text="Sample text inside" />
+            <Button Content="Sample button" />
+        </StackPanel>
+    </teast:GroupBox>
+</Window>
