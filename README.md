@@ -1,5 +1,5 @@
 # GroupBox
-This is my try to do an GroupBox much like WPF.
+This is my try to do an GroupBox component for AValoniaUI much like WPF.
 
 # How to compile
 * Check out the code.
