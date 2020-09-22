@@ -1,6 +1,7 @@
 ﻿using System;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Markup.Xaml;
 using Avalonia.Media;
 using Avalonia.Metadata;
 using Avalonia.Styling;
@@ -18,14 +19,6 @@ namespace Teast.Controls
                 o => o.Header,
                 (o, v) => o.Header = o.HeaderUpperCase ? v?.ToUpperInvariant() : v );
         
-        /// <summary>
-        /// Defines the <see cref="BoxContent"/> property.
-        /// </summary>
-        public static readonly DirectProperty<GroupBox, IControl> BoxContentProperty =
-            AvaloniaProperty.RegisterDirect<GroupBox, IControl>(nameof(BoxContent),
-                o => o.BoxContent,
-                (o, v) => o.BoxContent = v);
-
         /// <summary>
         /// Defines the <see cref="HeaderBackground"/> property.
         /// </summary>
@@ -51,7 +44,6 @@ namespace Teast.Controls
             AvaloniaProperty.Register<GroupBox, bool>(nameof(HeaderUpperCase));
 
         private string _header;
-        private IControl _boxContent;
 
         /// <summary>
         /// Gets or sets a brush with which to paint the Header background.
@@ -98,53 +90,16 @@ namespace Teast.Controls
             set { SetAndRaise(HeaderProperty, ref _header, value); }
         }
 
-        /// <summary>
-        /// Gets or sets the decorated control.
-        /// </summary>
-        [Content]
-        public IControl BoxContent
-        {
-            get { return _boxContent; }
-            set { SetAndRaise(BoxContentProperty, ref _boxContent, value); }
-        }
-
         Type IStyleable.StyleKey => typeof(GroupBox);
 
         public GroupBox()
         {
-            var grid = new Grid
-            {
-                RowDefinitions = new RowDefinitions("Auto,*"),
-                ColumnDefinitions = new ColumnDefinitions("*")
-            };
+            InitializeComponent();
+        }
 
-            var dock = new DockPanel
-            {
-                LastChildFill = true,
-                [Grid.RowProperty] = 0,
-                [!DockPanel.BackgroundProperty] = this.GetObservable(HeaderBackgroundProperty).ToBinding()
-            };
-
-            var header = new TextBlock
-            {
-                [!TextBlock.TextProperty] = this.GetObservable(HeaderProperty).ToBinding(),
-                [!TextBlock.MarginProperty] = this.GetObservable(HeaderMarginProperty).ToBinding(),
-                [!TextBlock.ForegroundProperty] = this.GetObservable(HeaderForegroundProperty).ToBinding()
-            };
-
-            var ctrl = new UserControl
-            {
-                [Grid.RowProperty] = 1,
-                [!UserControl.ContentProperty] = this.GetObservable(BoxContentProperty).ToBinding(),
-                Margin = new Thickness(5)
-            };
-
-            dock.Children.Add(header);
-            grid.Children.Add(dock);
-            grid.Children.Add(ctrl);
-            this.Margin = new Thickness(0, 0, 3, 10);
-
-            this.Content = grid;
+        private void InitializeComponent()
+        {
+            AvaloniaXamlLoader.Load(this);
         }
    }
 }

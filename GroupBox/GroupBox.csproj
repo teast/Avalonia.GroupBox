@@ -6,18 +6,21 @@
     <RootNamespace>Teast.Controls.GroupBox</RootNamespace>
     <Authors>Niklas Jansson</Authors>
     <Owners>Niklas Jansson</Owners>
-    <Copyright>Copyright © 2018</Copyright>
+    <Copyright>Copyright © 2018-2020</Copyright>
     <PackageProjectUrl>https://github.com/teast/Avalonia.GroupBox</PackageProjectUrl>
     <Description>Implements an GroupBox-like component for AvalonioUI</Description>
     <PackageTags>Avalonia AvalonioUI GroupBox control</PackageTags>
-    <Version>1.0.6.0</Version>
+    <Version>1.1.0.0</Version>
   </PropertyGroup>
   <ItemGroup>
-    <EmbeddedResource Include="**\*.xaml">
+    <Compile Update="**\*.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <AvaloniaResource Include="**\*.xaml">
       <SubType>Designer</SubType>
-    </EmbeddedResource>
+    </AvaloniaResource>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.6.2"/>
+    <PackageReference Include="Avalonia" Version="0.9.12" />
   </ItemGroup>
 </Project>

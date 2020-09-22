@@ -1,0 +1,26 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:teast="clr-namespace:Teast.Controls" mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450" x:Class="Teast.Controls.GroupBox">
+  <UserControl.Styles>
+    <Style Selector="teast|GroupBox">
+      <Setter Property="Template">
+        <ControlTemplate>
+          <Grid RowDefinitions="Auto,*" ColumnDefinitions="*">
+            <DockPanel LastChildFill="True" Grid.Row="0" Background="{TemplateBinding HeaderBackground}">
+              <TextBlock Text="{TemplateBinding Header}" Margin="{TemplateBinding HeaderMargin}" Foreground="{TemplateBinding HeaderForeground}" />
+            </DockPanel>
+            <ContentControl Grid.Row="1" Content="{TemplateBinding Content}" Margin="5" />
+          </Grid>
+        </ControlTemplate>
+      </Setter>
+      <Setter Property="HeaderBackground" Value="{DynamicResource ThemeControlMidBrush}"/>
+      <Setter Property="HeaderForeground" Value="{DynamicResource ThemeForegroundBrush}"/>
+      <Setter Property="HeaderMargin" Value="4"/>
+      <Setter Property="HeaderUpperCase" Value="True"/>
+      <Setter Property="BorderBrush" Value="{DynamicResource ThemeControlMidBrush}"/>
+      <Setter Property="BorderThickness" Value="{DynamicResource ThemeBorderThickness}"/>
+    </Style>
+  </UserControl.Styles>
+</UserControl>
