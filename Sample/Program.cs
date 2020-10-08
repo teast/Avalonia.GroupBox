@@ -1,7 +1,4 @@
-﻿using System;
-using System.Reflection;
-using Avalonia;
-using Avalonia.Logging.Serilog;
+﻿using Avalonia;
 
 namespace Sample
 {
