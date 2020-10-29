@@ -6,7 +6,7 @@
         mc:Ignorable="d"
         x:Class="Sample.MainWindow"
         Title="Sample"
-        Padding="5">
+        Padding="25">
     <teast:GroupBox
         Header="This is a header">
         <StackPanel>
