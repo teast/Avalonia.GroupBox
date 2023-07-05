@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
@@ -8,7 +8,7 @@ using Avalonia.Styling;
 
 namespace Teast.Controls
 {
-    public class GroupBox : UserControl, IStyleable
+    public partial class GroupBox : UserControl, IStyleable
     {
         /// <summary>
         /// Defines the <see cref="Header"/> property.
