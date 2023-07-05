@@ -5,12 +5,38 @@
     "tasks": [
         {
             "label": "build",
-            "command": "dotnet build /p:GenerateFullPaths=true",
-            "type": "shell",
-            "group": "build",
-            "presentation": {
-                "reveal": "silent"
-            },
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/GroupBox.sln",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/GroupBox.sln",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/Sample/Sample.csproj"
+            ],
             "problemMatcher": "$msCompile"
         }
     ]
