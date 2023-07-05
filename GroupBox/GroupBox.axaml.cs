@@ -1,13 +1,11 @@
-using System;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media;
-using Avalonia.Styling;
 
 namespace Teast.Controls
 {
-    public partial class GroupBox : UserControl, IStyleable
+    public partial class GroupBox : UserControl
     {
         /// <summary>
         /// Defines the <see cref="Header"/> property.
@@ -88,8 +86,6 @@ namespace Teast.Controls
             get { return _header; }
             set { SetAndRaise(HeaderProperty, ref _header, value); }
         }
-
-        Type IStyleable.StyleKey => typeof(GroupBox);
 
         public GroupBox()
         {
