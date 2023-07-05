@@ -8,12 +8,12 @@
       <Setter Property="Template">
         <ControlTemplate>
           <Border BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
-          <Grid RowDefinitions="Auto,*" ColumnDefinitions="*">
-            <DockPanel LastChildFill="True" Grid.Row="0" Background="{TemplateBinding HeaderBackground}">
-              <TextBlock Text="{TemplateBinding Header}" Margin="{TemplateBinding HeaderMargin}" Foreground="{TemplateBinding HeaderForeground}" />
-            </DockPanel>
-            <ContentControl Grid.Row="1" Content="{TemplateBinding Content}" Margin="{TemplateBinding Margin}" />
-          </Grid>
+            <Grid RowDefinitions="Auto,*" ColumnDefinitions="*">
+              <DockPanel LastChildFill="True" Grid.Row="0" Background="{TemplateBinding HeaderBackground}">
+                <TextBlock Text="{TemplateBinding Header}" Margin="{TemplateBinding HeaderMargin}" Foreground="{TemplateBinding HeaderForeground}" />
+              </DockPanel>
+              <ContentControl Grid.Row="1" Content="{TemplateBinding Content}" Margin="{TemplateBinding Margin}" />
+            </Grid>
           </Border>
         </ControlTemplate>
       </Setter>
