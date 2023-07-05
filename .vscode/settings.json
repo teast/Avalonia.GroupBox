@@ -1,0 +1,4 @@
+{
+    "dotnet.defaultSolution": "GroupBox.sln",
+    "cmake.configureOnOpen": false
+}
