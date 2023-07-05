@@ -9,16 +9,23 @@
     <Owners>Niklas Jansson</Owners>
     <Copyright>Copyright © 2018-2023</Copyright>
     <PackageProjectUrl>https://github.com/teast/Avalonia.GroupBox</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/teast/Avalonia.GroupBox</RepositoryUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageReadmeFile>..\README.md</PackageReadmeFile>
     <Description>Implements a GroupBox-like control for AvaloniaUI</Description>
     <PackageTags>Avalonia AvaloniaUI GroupBox control</PackageTags>
     <Version>1.2.1-preview5</Version>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="docs\README.md" Pack="true" PackagePath="\" />
     <AvaloniaResource Include="Themes\*.axaml">
       <SubType>Designer</SubType>
     </AvaloniaResource>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
   </ItemGroup>
 </Project>
