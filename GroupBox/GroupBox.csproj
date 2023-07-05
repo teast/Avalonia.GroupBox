@@ -16,7 +16,7 @@
     <PackageReadmeFile>..\README.md</PackageReadmeFile>
     <Description>Implements a GroupBox-like control for AvaloniaUI</Description>
     <PackageTags>Avalonia AvaloniaUI GroupBox control</PackageTags>
-    <Version>1.2.1-preview5</Version>
+    <Version>2.0.0-rc2.2</Version>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docs\README.md" Pack="true" PackagePath="\" />
