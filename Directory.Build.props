@@ -1,0 +1,10 @@
+<Project>
+    <PropertyGroup>
+        <AvaloniaVersion>11.0.0-rc2.2</AvaloniaVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- show this file in Solution Explorer/View -->
+        <None Include="$(MSBuildThisFileFullPath)" />
+    </ItemGroup>
+</Project>

@@ -1,19 +1,12 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Update="**\*.xaml.cs">
-      <DependentUpon>%(Filename)</DependentUpon>
-    </Compile>
-    <AvaloniaResource Include="**\*.xaml">
-      <SubType>Designer</SubType>
-    </AvaloniaResource>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.10.0-preview5" />
-    <PackageReference Include="Avalonia.Desktop" Version="0.10.0-preview5" />
+    <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Avalonia.Desktop" Version="$(AvaloniaVersion)" />
+   <PackageReference Include="Avalonia.Themes.Simple" Version="$(AvaloniaVersion)" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GroupBox\GroupBox.csproj" />
