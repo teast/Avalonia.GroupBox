@@ -4,13 +4,13 @@ using Avalonia.Markup.Xaml;
 
 namespace Sample
 {
-    public class App : Application
+    public partial class App : Application
     {
         public override void Initialize()
         {
             AvaloniaXamlLoader.Load(this);
         }
-        
+
         public override void OnFrameworkInitializationCompleted()
         {
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
@@ -20,5 +20,5 @@ namespace Sample
 
             base.OnFrameworkInitializationCompleted();
         }
-   }
+    }
 }

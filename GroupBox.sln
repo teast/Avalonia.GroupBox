@@ -1,8 +1,7 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
-MinimumVisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 17.0.31903.59
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupBox", "GroupBox\GroupBox.csproj", "{1E2912DE-0D83-420C-968D-77CD3E9F766A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample\Sample.csproj", "{B3B77768-332A-4F7D-87EB-CB66150E1B1B}"

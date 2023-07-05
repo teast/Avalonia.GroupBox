@@ -1,4 +1,4 @@
-﻿using Avalonia;
+using Avalonia;
 
 namespace Sample
 {
@@ -10,6 +10,6 @@ namespace Sample
         public static AppBuilder BuildAvaloniaApp()
             => AppBuilder.Configure<App>()
                 .UsePlatformDetect()
-                .LogToDebug();
+                .LogToTrace();
     }
 }

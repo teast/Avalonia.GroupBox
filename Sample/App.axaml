@@ -3,11 +3,11 @@
              xmlns:teast="clr-namespace:Teast.Controls;assembly=Teast.Controls.GroupBox"
              x:Class="Sample.App">
   <Application.Styles>
-    <StyleInclude Source="resm:Avalonia.Themes.Default.DefaultTheme.xaml?assembly=Avalonia.Themes.Default"/>
-    <StyleInclude Source="resm:Avalonia.Themes.Default.Accents.BaseLight.xaml?assembly=Avalonia.Themes.Default"/>
+    
+    <SimpleTheme />
 
     <!-- Default theme:
-    <StyleInclude Source="avares://Teast.Controls.GroupBox/Themes/Default.xaml"/>
+    <StyleInclude Source="avares://Teast.Controls.GroupBox/Themes/Default.axaml"/>
     -->
 
     <!-- Custom theme:-->

@@ -7,21 +7,25 @@
     <RootNamespace>Teast.Controls.GroupBox</RootNamespace>
     <Authors>Niklas Jansson</Authors>
     <Owners>Niklas Jansson</Owners>
-    <Copyright>Copyright © 2018-2020</Copyright>
+    <Copyright>Copyright © 2018-2023</Copyright>
     <PackageProjectUrl>https://github.com/teast/Avalonia.GroupBox</PackageProjectUrl>
-    <Description>Implements an GroupBox-like component for AvalonioUI</Description>
-    <PackageTags>Avalonia AvalonioUI GroupBox control</PackageTags>
-    <Version>1.2.1-preview5</Version>
+    <RepositoryUrl>https://github.com/teast/Avalonia.GroupBox</RepositoryUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageReadmeFile>..\README.md</PackageReadmeFile>
+    <Description>Implements a GroupBox-like control for AvaloniaUI</Description>
+    <PackageTags>Avalonia AvaloniaUI GroupBox control</PackageTags>
+    <Version>2.0.0-rc2.2</Version>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Update="**\*.xaml.cs">
-      <DependentUpon>%(Filename)</DependentUpon>
-    </Compile>
-    <AvaloniaResource Include="**\*.xaml">
+    <None Include="docs\README.md" Pack="true" PackagePath="\" />
+    <AvaloniaResource Include="Themes\*.axaml">
       <SubType>Designer</SubType>
     </AvaloniaResource>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.10.0-preview5" />
+    <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
   </ItemGroup>
 </Project>
